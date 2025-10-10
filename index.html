@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Shopping site </title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="sample.css" />
+  <script src="sample.js" defer></script>
+  <link rel="icon" href="https://www.freelogovectors.net/wp-content/uploads/2025/07/flipkart-logo-icon-freelogovectors.net_-481x480.png" type="image/x-icon">
+</head>
+
+<body style="background-color: rgb(235, 235, 235);">
+
+<!-- ================= TOP NAVBAR ================= -->
+<nav class="top-navbar navbar navbar-expand-lg">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg" alt="Logo" class="logo-img" />
+    </a>
+
+    <!-- Hamburger Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Content -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <!-- ✅ Wrapper added to fix layout on small screens -->
+      <div class="w-100 d-flex flex-column flex-lg-row align-items-stretch">
+        <!-- Search -->
+        <div class="navbar-search flex-grow-1 me-lg-4 mb-2 mb-lg-0">
+          <i class="bi bi-search search-icon"></i>
+          <input class="form-control search-input" type="search" placeholder="Search for Products, Brands and More" />
+        </div>
+
+        <!-- Right Buttons -->
+        <div class="navbar-actions d-flex flex-column flex-lg-row">
+          <!-- Login -->
+          <div class="navbar-login dropdown">
+            <button class="login-btn" id="loginDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-circle"></i> Login <i class="bi bi-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdown">
+              <li><a class="dropdown-item" href="#">New Customer? <span class="signup-text">Sign Up</span></a></li>
+              <li><a class="dropdown-item" href="#">My Profile</a></li>
+              <li><a class="dropdown-item" href="#">Orders</a></li>
+              <li><a class="dropdown-item" href="#">Wishlist</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </div>
+
+          <!-- Cart -->
+          <button class="navbar-cart">
+            <i class="bi bi-cart2"></i> Cart
+          </button>
+
+          <!-- Seller -->
+          <button class="navbar-seller">
+            <i class="bi bi-shop"></i> Become a Seller
+          </button>
+
+          <!-- More -->
+          <div class="navbar-more dropdown ms-auto">
+            <button class="more-btn" id="moreDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreDropdown">
+              <li><a class="dropdown-item" href="#">Notification Preferences</a></li>
+              <li><a class="dropdown-item" href="#">24x7 Customer Care</a></li>
+              <li><a class="dropdown-item" href="#">Advertise</a></li>
+              <li><a class="dropdown-item" href="#">Download App</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= CATEGORY NAV ================= -->
+<nav class="navbar-category d-flex align-items-center bg-white p-2">
+  <div class="categorys d-flex justify-content-start w-100 flex-wrap">
+    <!-- Categories -->
+    <div class="category-item category-minutes">
+      <img src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/3dbe4c89fbf0003d.png?q=100" alt="minutes" />
+      <p>Minutes</p>
+    </div>
+    <div class="category-item category-mobiles">
+      <img src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/cd6aca4f61e8ea95.png?q=100" alt="mobiles" />
+      <p>Mobiles&Tablets</p>
+    </div>
+    <div class="category-item category-fashion">
+      <img src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/ec2982e5564fe07c.png?q=100" alt="Fashion" />
+      <p>
+        <a class="fashion-toggle" href="#fashionMenu">
+          Fashion <i class="bi bi-chevron-down"></i>
+        </a>
+      </p>
+      <div class="submenu" id="fashionMenu">
+        <ul>
+          <li><a href="#">Mens Footwear</a></li>
+          <li><a href="#">Womens Footwear</a></li>
+          <li><a href="#">Women Ethnic</a></li>
+          <li><a href="#">Kids Wear</a></li>
+          <li><a href="#">Mens Ethnic</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="category-item category-electronics">
+      <img src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/4d6b13d5a0e0724a.png?q=100" alt="electronics" />
+      <p>
+        <a class="electronics-toggle" href="#electronicsMenu">
+          Electronics <i class="bi bi-chevron-down"></i>
+        </a>
+      </p>
+      <div class="submenu-electro" id="electronicsMenu">
+        <ul>
+          <li><a href="#">Laptops</a></li>
+          <li><a href="#">Gaming</a></li>
+          <li><a href="#">Cameras</a></li>
+          <li><a href="#">Smart Watches</a></li>
+          <li><a href="#">Headphones</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="category-item category-home">
+      <img src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/cddd92e134ba3ea9.png?q=100" alt="home" />
+      <p>
+        <a class="home-toggle" href="#homeMenu">
+          Home & Furniture <i class="bi bi-chevron-down"></i>
+        </a>
+      </p>
+      <div class="submenu-home" id="homeMenu">
+        <ul>
+          <li><a href="#">Kitchen & Dining</a></li>
+          <li><a href="#">Home Decor</a></li>
+          <li><a href="#">Furniture</a></li>
+          <li><a href="#">Garden & Outdoors</a></li>
+          <li><a href="#">Tools & Utility</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- Remaining Categories -->
+    <div class="category-item category-tv">
+      <img src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/9c64dfa667885ca9.png?q=100" alt="tv" />
+      <p>Tv&Appliances</p>
+    </div>
+    <div class="category-item category-flights">
+      <img src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/d9eea6cd0e7b68bb.png?q=100" alt="flights" />
+      <p>Flight Bookings</p>
+    </div>
+    <div class="category-item category-beauty">
+      <img src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/3d7144345bbcf2e4.png?q=100" alt="beauty" />
+      <p>Beauty,Food</p>
+    </div>
+    <div class="category-item category-grocery">
+      <img src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/2ebb95ec20eae8f1.png?q=100" alt="grocery" />
+      <p>Grocery</p>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- ================= CUSTOM CAROUSEL ================= -->
+<div class="carousel" id="carousel1">
+  <div class="carousel-track">
+    <div class="carousel-slide">
+      <a href="https://www.flipkart.com/offers-list/top-offers?otracker=nmenu_sub_Top%20Offers_0_Top%20Offers" target="_blank">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/8c2598b5c820a42b.jpg?q=60" alt="Banner 1">
+      </a>
+    </div>
+    <div class="carousel-slide">
+      <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/6cbfac6f1b2702a4.jpg?q=60" alt="Banner 2">
+    </div>
+    <div class="carousel-slide">
+      <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/d914343e662d6749.jpeg?q=60" alt="Banner 3">
+    </div>
+    <div class="carousel-slide">
+      <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/5adcd1dbd3025bc8.jpeg?q=60" alt="Banner 4">
+    </div>
+    <div class="carousel-slide">
+      <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/9de2411d67e1bd0c.jpg?q=60" alt="Banner 5">
+    </div>
+    <div class="carousel-slide">
+      <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/f12b23456036aa64.jpeg?q=60" alt="Banner 6">
+    </div>
+    <div class="carousel-slide">
+      <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/f12b23456036aa64.jpeg?q=60" alt="Banner 6">
+    </div>
+    
+  </div>
+
+  <!-- Navigation buttons -->
+  <button class="carousel-btn left" aria-label="Previous">❮</button>
+  <button class="carousel-btn right" aria-label="Next">❯</button>
+</div>
+  <!-- Indicators (dots) -->
+  <div class="carousel-indicators">
+      <button class="active"></button>
+      <button></button>
+      <button></button> 
+
+</div>
+
+<nav class="sm-ad-section">
+  <div class="smartphones-section"> 
+    <h3>Best deals on Smartphones</h3>
+    <button class="scroll-btn left">&#10094;</button>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://rukminim1.flixcart.com/image/240/240/xif0q/mobile/j/n/1/-original-imah9gtmya9qhqse.jpeg?q=60" alt="Product 1">
+        <h4>Realme P3x 5G</h4>
+        <p class="price">From ₹23,999</p>
+      </div>
+      <div class="product-card">
+        <img src="https://rukminim1.flixcart.com/image/240/240/xif0q/mobile/l/x/1/-original-imahdv5ttyhhyhg9.jpeg?q=60" alt="Product 2">
+        <h4>Motorola g96 5G</h4>
+        <p class="price">From ₹33,999</p>
+      </div>
+      <div class="product-card">
+        <img src="https://rukminim1.flixcart.com/image/240/240/xif0q/mobile/x/g/r/-original-imahc7ez8cq55mah.jpeg?q=60" alt="Product 3">
+        <h4>Nothing Pro 5G</h4>
+        <p class="price">From ₹23,999</p>
+      </div>
+      <div class="product-card">
+        <img src="https://rukminim1.flixcart.com/image/240/240/xif0q/mobile/y/w/w/-original-imahfkvf9ngfahpg.jpeg?q=60" alt="Product 4">
+        <h4>Vivo T4 Pro</h4>
+        <p class="price">From ₹15,999</p>
+      </div>
+      <div class="product-card">
+        <img src="https://rukminim1.flixcart.com/image/240/240/xif0q/mobile/g/r/b/-original-imahd872ftjsb6xh.jpeg?q=60" alt="Product 6">
+        <h4>Vivo T4 Lite 5G</h4>
+        <p class="price">Just ₹13,999</p>
+      </div>
+      <div class="product-card">
+        <img src="https://rukminim2.flixcart.com/image/240/240/xif0q/mobile/q/l/i/-original-imahegqhjqz38uks.jpeg?q=60" alt="Product 5">
+        <h4>Redmi Note 12 5G</h4>
+        <p class="price">From ₹14,999</p>
+      </div>
+      <div class="product-card">
+        <img src="https://rukminim2.flixcart.com/image/240/240/xif0q/mobile/q/l/i/-original-imahegqhjqz38uks.jpeg?q=60" alt="Product 5">
+        <h4>Redmi Note 12 5G</h4>
+        <p class="price">From ₹14,999</p>
+      </div>
+    </div>
+    <button class="scroll-btn right">&#10095;</button>
+  </div>
+
+  <div class="ad-banner">
+    <img src="https://rukminim1.flixcart.com/fk-p-flap/1060/1620/image/ce3cf81edb760559.jpg?q=60" alt="">
+  </div>
+</nav>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
