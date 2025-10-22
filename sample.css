@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ================= NAVBAR ================= */
 
 /* Force-hide collapsed content only on small screens */
@@ -601,3 +602,436 @@ body {
   overflow: hidden; 
 
 }
+=======
+/* ================= NAVBAR ================= */
+
+/* Force-hide collapsed content only on small screens */
+@media (max-width: 991.98px) {
+  .collapse:not(.show) {
+    display: none !important;
+  }
+}
+
+/* Remove default body margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar container styling */
+.top-navbar {
+  margin: 0;
+  padding-bottom: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+}
+
+/* Flex container inside navbar */
+.top-navbar .container-fluid {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo styling */
+.navbar-logo {
+  flex: 0 0 auto;
+}
+.navbar-logo .logo-img {
+  height: 40px;
+  width: auto;
+}
+
+/* Search bar styling */
+.navbar-search {
+  flex: 1;
+  margin: 0 20px;
+  position: relative;
+  min-width: 800px;
+  max-width: 1600px;
+}
+.navbar-search .search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #1a1818;
+}
+.navbar-search .search-input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 12px 8px 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #eff5fe;
+  font-size: 18px;
+}
+.navbar-search .search-input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  background-color: #eff5fe;
+}
+
+/* Right-side actions container */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+.navbar-actions button,
+.navbar-login .login-btn,
+.navbar-cart,
+.navbar-seller,
+.navbar-more .more-btn {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+.navbar-actions i {
+  margin-right: 8px;
+}
+
+/* Login dropdown menu */
+.navbar-login .dropdown-menu {
+  right: 0;
+  left: auto;
+  min-width: 200px;
+  display: none;
+}
+
+/* More dropdown menu */
+.navbar-more {
+  margin-left: 0 !important;
+}
+.navbar-more .dropdown-menu {
+  right: 0;
+  left: auto;
+  min-width: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Dropdown common styling */
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* ================= RESPONSIVE FIXES ================= */
+@media (max-width: 992px) {
+  .navbar-search {
+    min-width: 200px;
+    max-width: 400px;
+  }
+  .navbar-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    padding: 0 12px;
+  }
+  .navbar-actions button,
+  .navbar-login .login-btn,
+  .navbar-cart,
+  .navbar-seller,
+  .navbar-more .more-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 992px) {
+  .dropdown:hover > .dropdown-menu {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+@media (max-width: 576px) {
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .navbar-search {
+    width: 100%;
+    min-width: 100%;
+    margin: 10px 0;
+    padding: 0 12px;
+  }
+  .navbar-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    padding: 0 12px;
+  }
+  .navbar-actions button,
+  .navbar-login .login-btn,
+  .navbar-cart,
+  .navbar-seller,
+  .navbar-more .more-btn {
+    font-size: 14px;
+    padding: 4px 8px;
+    width: 100%;
+  }
+}
+
+/* ================= CATEGORY NAV ================= */
+.navbar-category {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 25px;
+  width: calc(100% - 30px);
+  max-width: 1600px;
+  margin: 10px auto;
+  padding: 5px 12px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.categorys {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 100px;
+  gap: 60px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  min-width: 70px;
+}
+.category-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+.category-item p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+.categorys img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+@media (max-width: 768px) {
+  .categorys {
+    margin-left: 0;
+    justify-content: center;
+    gap: 30px;
+  }
+  .category-item img {
+    width: 60px;
+    height: 60px;
+  }
+  .category-item p {
+    font-size: 12px;
+  }
+}
+
+/* ================= SUBMENU STYLES ================= */
+.fashion-toggle,
+.electronics-toggle,
+.home-toggle {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.category-item:hover .fashion-toggle .bi,
+.category-item:hover .electronics-toggle .bi,
+.category-item:hover .home-toggle .bi,
+.navbar-login .login-btn:hover .bi-chevron-down {
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+.submenu,
+.submenu-electro,
+.submenu-home {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  z-index: 1000;
+  min-width: 150px;
+}
+.category-item:hover .submenu,
+.category-item:hover .submenu-electro,
+.category-item:hover .submenu-home {
+  display: flex;
+  flex-direction: column;
+}
+.submenu ul,
+.submenu-electro ul,
+.submenu-home ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.submenu ul li,
+.submenu-electro ul li,
+.submenu-home ul li {
+  padding: 4px 0;
+}
+.submenu ul li a,
+.submenu-electro ul li a,
+.submenu-home ul li a {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  display: block;
+  padding: 4px 8px;
+}
+.submenu ul li a:hover,
+.submenu-electro ul li a:hover,
+.submenu-home ul li a:hover {
+  background-color: #f1f1f1;
+  color: #2874f0;
+}
+
+/* ================= CAROUSEL ================= */
+.carousel {
+  position: relative;
+  width: calc(100% - 30px);
+  max-width: 1600px;
+  margin: 15px auto;
+  aspect-ratio: 16 / 9;
+  max-height: 300px;
+  overflow: hidden;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+.carousel-slide img {
+  width: 100%;
+  height: calc(100% - 25px);
+  object-fit: cover;
+}
+
+/* ================= NAVIGATION BUTTONS ================= */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 90px;
+  background: rgba(255,255,255,0.8);
+  color: #888181;
+  border: none;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+.carousel-btn.left {
+  left: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.carousel-btn.right {
+  right: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.carousel-btn:hover {
+  background: rgba(255,255,255,1);
+  color: #555;
+}
+
+/* ================= INDICATORS ================= */
+.carousel-indicators {
+  position: relative;
+  display: flex;
+  bottom: 30px;
+  gap: 10px;
+}
+.carousel-indicators button {
+  width: 50px;
+  height: 5px;
+  border-radius: 2px;
+  border: none;
+  background-color: rgb(228, 228, 228);
+}
+.carousel-indicators button.active {
+  background-color: rgb(9, 2, 2);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .carousel-btn {
+    width: 30px;
+    height: 60px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .carousel-btn {
+    width: 25px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+>>>>>>> origin/main
